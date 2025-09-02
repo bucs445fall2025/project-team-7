@@ -1,20 +1,20 @@
-How will you use this application?
+1. How will you use this application?
 
 It would be a web application with a login system. After logging in with a user account, the user would then be able to either offer to drop off an item or request to borrow an item from another user. 
 
-Where would the user be located physically when using this application?
+2. Where would the user be located physically when using this application?
 		
 On campus 
 
-Where would the results be visible?
+3. Where would the results be visible?
 
 The results would be visible to the user through a GUI that includes the item as well as the location that the item is needed whether or not a lender is found for the item 
 	
-When will this application be used?
+4. When will this application be used?
 
 When the students need an item (calculator, etc) that they don’t necessarily need	to purchase, they can use this application to borrow it from someone on campus. 
 
-When can the application fail?
+5. When can the application fail?
 		
 If there are not enough users who are using the application there might not be enough items for people to borrow making the application’s use case invalid 
 
@@ -22,17 +22,17 @@ If stealing becomes prevalent there must be a way to remove harmful users
 
 Items must be easily findable on the map to ensure that people are able to locate the person that they are landing to 
 
-Who is my user?
+6. Who is my user?
 
 College students who are conscious of their consumption of goods as well as monetarily limited students who might not be able to afford to purchase the goods that they are borrowing outright
 
-College Students that are in need   
-Who will deliver the inputs for the application?
-Who will receive the outputs of the application?
-What do I know about this application?
-What does this application need to do?
-What are the components of this application?
-What needs to happen next?
+7. College Students that are in need   
+8. Who will deliver the inputs for the application?
+9. Who will receive the outputs of the application?
+10. What do I know about this application?
+11. What does this application need to do?
+12. What are the components of this application?
+13. What needs to happen next?
 What must happen before the next step?
 What needs to be tracked?
 
