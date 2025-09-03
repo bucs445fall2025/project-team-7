@@ -1,22 +1,21 @@
 1. How will you use this application?
-It would be a web application with a login system. After logging in with a user account, the user would then be able to either offer to drop off an item or request to borrow an item from another user. 
+It would be a web application with a login system. After logging in with a user account, the user would then be able to either offer to lend an item or request to borrow an item from another user. 
 
 2. Where would the user be located physically when using this application?	
 On campus 
 
 3. Where would the results be visible?
-The results would be visible to the user through a GUI that includes the item as well as the location that the item is needed whether or not a lender is found for the item 
+The results would be visible to the user through a GUI that includes the item as well as the location that the item is needed whether or not a lender is found for the item. 
 	
 4. When will this application be used?
-When the students need an item (calculator, etc) that they don’t necessarily need	to purchase, they can use this application to borrow it from someone on campus. 
+When the students need an item (calculator, etc) that they don’t necessarily need to purchase, they can use this application to borrow it from someone on campus. 
 
 5. When can the application fail?	
-If there are not enough users who are using the application there might not be enough items for people to borrow making the application’s use case invalid 
-If stealing becomes prevalent there must be a way to remove harmful users
-Items must be easily findable on the map to ensure that people are able to locate the person that they are landing to 
+If there are not enough users who are using the application there might not be enough items for people to borrow making the application’s use case invalid.
+If stealing becomes prevalent there must be a way to remove harmful users.
 
 6. Who is my user?
-College students who are conscious of their consumption of goods as well as monetarily limited students who might not be able to afford to purchase the goods that they are borrowing outright
+College students who are conscious of their consumption of goods as well as monetarily limited students who might not be able to afford to purchase the goods that they are borrowing outright.
 
 7. Who will deliver the inputs for the application?
 Lenders: Provide item information (name, picture, and availability).
@@ -24,30 +23,28 @@ Borrowers: Verify borrowing and request items.
 
 8. Who will receive the outputs of the application?
 Borrowers: Choose lenders and view available items.
-Lenders: Get alerts and requests when someone wants their item.
+Lenders: Get request notifications when someone wants their item.
 
 9. What do I know about this application?
-It is a platform for peer-to-peer lending.
-Its main goals are cost savings, convenience, and trust.
-Instead of being a worldwide marketplace like eBay, it should be community-focused and lightweight.
+It is a platform for peer-to-peer lending, where the goals are cost savings, convenience, and trust.
 
 10. What does this application need to do?
-Permit users to upload products along with availability, descriptions, and photos.
-Permit users to look up and filter nearby items.
+Allows users to upload products along with availability, descriptions, and photos and to look up and filter nearby items.
 Establish a system for matching and notifications.
 Allow the borrower and lender to communicate via chat or messaging.
 Keep track of past loans and borrows, and enforce due dates.
 For accountability, provide reviews and ratings.
 
 11. What are the components of this application?
-Frontend (Web/Mobile) - Chat UI, search, and item listing.
-Backend (API/Database) - Controls users, items, and loan requests.
+Frontend - Chat UI, search, and item listing.
+Backend - Controls users, items, and loan requests.
 Database - Holds ratings, transactions, items, and users.
 Authentication System - Verification of student ID and email.
 Notification System - Notifications of due dates and borrow requests.
 
 12. What needs to happen next?
-
+Keep track of reports of returning damaged item or stealing. 
+Make sure to build trust with the users.
 
 13.What must happen before the next step?
 Ask prospective users (peers, students) if they think the idea is good.
