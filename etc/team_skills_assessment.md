@@ -1,23 +1,23 @@
 Java
-  Hoyeon Yoo: Proficient 
+- Hoyeon Yoo: Proficient 
   
 Python
-  Hoyeon Yoo: Novice 
+- Hoyeon Yoo: Novice 
   
 C++/C
-  Hoyeon Yoo: Competent
+- Hoyeon Yoo: Competent
   
 JavaScript
-  Hoyeon Yoo: Novice 
+ - oyeon Yoo: Novice 
   
 HTML/CSS
-  Hoyeon Yoo: Novice 
+- Hoyeon Yoo: Novice 
   
 Spring Framework / Spring Boot
-  Hoyeon Yoo: Competent
+- Hoyeon Yoo: Competent
   
 Oracle DB
-  Hoyeon Yoo: Competent
+- Hoyeon Yoo: Competent
   
 MySQL
-  Hoyeon Yoo: Novice
+- Hoyeon Yoo: Novice
