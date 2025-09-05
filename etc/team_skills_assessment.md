@@ -8,7 +8,7 @@ C++/C
 - Hoyeon Yoo: Competent
   
 JavaScript
- - oyeon Yoo: Novice 
+ - Hoyeon Yoo: Novice 
   
 HTML/CSS
 - Hoyeon Yoo: Novice 
