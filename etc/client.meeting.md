@@ -1,18 +1,18 @@
 ## Client Meeting Notes
 
 **Project Name:** Borrow and lend
-**Date:** 09/08/2025
-**Client Name:** Elif 
+**Date:** 09/15/2025
+**Client Name:** Anthony Zheng
 **Interviewed By:** Hoyeon Yoo
 
 ---
 
 ### **Client Overview**
 - **Brief description of the client and their background:**
-  Elif is a student who needs a calculator for her exam but don't want purchase one.
+  Anthony is a student who needs a calculator for her exam but don't want purchase one.
 
 - **Client’s main goal for the software:**
-  This website should help her to borrow calculator (or other items) from someone else on campus.
+  This website should help him to borrow calculator (or other items) from someone else on campus.
 
 ---
 
@@ -21,44 +21,54 @@
 #### **1. What are the costs vs. budget?**
 **Client’s Response:**
 (Example: "I don’t want to spend much, ideally free, but I’d consider paying a one-time fee.")
+I don't have that much to pay in hourly basis. I want it to be self-funding project. I have around $1000 left-over in my own bank account but I would rather not use it.
 
 **Clarification & Notes:**
 (Example: The client is looking for a free tool but may accept optional paid features.)
+The client is looking for a tool that can be created for free or within $1000.
 
 ---
 
 #### **2. What is the timeframe for this project?**
 **Client’s Response:**
 (Example: "I need this ready before my next campaign starts in three months.")
+I’d ideally like to have a working prototype or alpha version ready by the time it reaches spring break and a fully functioning app by the end of my time at Binghamton University. 
 
 **Clarification & Notes:**
 (Example: A strict deadline, must focus on core features first.)
+Must be done by spring break. 
 
 ---
 
 #### **3. What problem are you trying to solve?**
 **Client’s Response:**
 (Example: "Managing initiative order and tracking actions is too slow.")
+I'm trying to make people’s lives easier and do some communal good before I leave college. However, I wouldn’t mind making some money, too. 
 
 **Clarification & Notes:**
 - The real problem is **speed and efficiency** during gameplay, not just "initiative tracking."
 - Consider features like **automation** and **UI improvements** to streamline this.
+The main problem is to save money from purchasing items for single use.
+Consider features like a map, a chatting area, etc.
 
 ---
 
 #### **4. What is the most important feature?**
 **Client’s Response:**
 (Example: "Initiative tracking needs to be easy and automatic.")
+I think just being able to find people who are willing to lend.
 
 **Clarification & Notes:**
 - This feature should be the **core focus** of the software.
 - Other features (e.g., dice rolling) are secondary.
+Matching people who want to borrow an item with those who are willing to lend, and a search feature for the borrowers to find lenders easily. 
 
 ---
 
 #### **5. Is there a similar product on the market?**
 **Client’s Response:**
 (Example: "Yes, but they are either too complex or too expensive.")
+Maybe in other schools? None that I've seen that is useful.
 
 **Clarification & Notes:**
 - Competitor analysis needed.
@@ -69,6 +79,7 @@
 #### **6. Are there any existing products or technologies that will need to be integrated?**
 **Client’s Response:**
 (Example: "It would be nice if it worked with Roll20 or D&D Beyond.")
+I think that gps tracking might be needed? I think thats it.
 
 **Clarification & Notes:**
 - Check for **APIs** for possible integrations.
