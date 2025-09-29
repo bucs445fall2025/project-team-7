@@ -3,6 +3,10 @@
 ## **Application Vision/Goal:**
 [Describe the overall purpose and vision of the application. What problem does it solve? Who is the target audience?]
 
+The purpose of this website is to allow students to borrow items from other students on-campus.
+This will prevents students from purchasing items for single use.
+Target audience is students in Binghamton.
+
 ## **Scope:**
 [List the major features and functionalities that define the scope of the project. Keep this high-level to avoid feature creep.]
 
