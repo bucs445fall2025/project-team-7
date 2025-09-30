@@ -89,7 +89,7 @@ Tester: Anthony Zheng
 [Establish how the team will communicate, how often meetings will happen, and any other ground rules for collaboration.]
 
 We will be communicating through text messages and discord. 
-We are going to have in-person meeting on Friday 3pm - 4pm and online meeting weekend?
+We are going to have in-person meeting on Friday 3pm - 4pm and online meeting during the weekend.
 
 ## **Application Stack:**
 [List all the technologies being used in the project, including programming languages, frameworks, and tools.]
