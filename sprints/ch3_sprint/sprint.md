@@ -33,6 +33,8 @@ Demo Data: Seed data for accounts/items to showcase during presentation.
 ## **Success Criteria:**
 [Define what will make this project successful. Examples include meeting deadlines, delivering core functionality, or achieving performance benchmarks.]
 
+-Functioning App that is able to both put out requests to borrow and requests to lend
+-meetings will happen every weekend and friday
 
 
 ## **Assumptions:**
@@ -68,10 +70,11 @@ Major Components:
 
 ## **Test Environment:**
 [Define how the application will be tested. Will you use automated tests? What environment will the tests run in?]
-
----
+- Test cases on VS code.
+- A seperate file with all of the test cases will be created
 
 # **Team Setup**
+
 
 ## **Team Members:**
 Hoyeon Yoo, Anthony Zheng, Elif Yildirim
