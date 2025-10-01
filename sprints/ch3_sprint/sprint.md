@@ -82,11 +82,11 @@ Hoyeon Yoo, Anthony Zheng, Elif Yildirim
 ## **Team Roles:**
 [Define roles for each team member, such as developer, designer, project manager, QA tester, etc.]
 
-Frontend: Anthony Zheng, Elif Yildirim
+Frontend: Anthony Zhang, Elif Yildirim
 Backend: Elif Yildirim, Hoyeon Yoo
 Database: Hoyeon Yoo
-Designer: Hoyeon Yoo, Anthony Zheng, Elif Yildirim
-Tester: Anthony Zheng
+Designer: Hoyeon Yoo, Anthony Zhang, Elif Yildirim
+Tester: Anthony Zhang
 
 ## **Team Norms:**
 [Establish how the team will communicate, how often meetings will happen, and any other ground rules for collaboration.]
