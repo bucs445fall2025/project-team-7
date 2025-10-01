@@ -71,6 +71,7 @@ Major Components:
 ## **Test Environment:**
 [Define how the application will be tested. Will you use automated tests? What environment will the tests run in?]
 - Test cases on VS code.
+- PyTest to test backend related code
 - A seperate file with all of the test cases will be created and put into a testing folder
 # **Team Setup**
 
