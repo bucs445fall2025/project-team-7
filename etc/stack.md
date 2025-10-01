@@ -11,6 +11,6 @@
 - **MySQL 8** → [mysql:8.0](https://hub.docker.com/_/postgres)
 
 ## **Cache**
-- Redis
+- Redis [Redis:8.2.1](https://hub.docker.com/_/redis)
 ## **Additional Dependencies**
 - Node.js
