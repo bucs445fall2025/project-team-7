@@ -6,6 +6,7 @@
 
 ## Requirements Attempted in next Sprint
 
+- Start building basic features like login and signup page
 
 ## Milestone Status (Pass/Fail)
 
