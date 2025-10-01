@@ -35,7 +35,7 @@ Demo Data: Seed data for accounts/items to showcase during presentation.
 
 -Functioning App that is able to both put out requests to borrow and requests to lend
 -meetings will happen every weekend and friday
-
+-Peformance will be enough to not cause issues for the user
 
 ## **Assumptions:**
 [List any assumptions about the technology, users, or resources that could impact development.]
@@ -71,8 +71,7 @@ Major Components:
 ## **Test Environment:**
 [Define how the application will be tested. Will you use automated tests? What environment will the tests run in?]
 - Test cases on VS code.
-- A seperate file with all of the test cases will be created
-
+- A seperate file with all of the test cases will be created and put into a testing folder
 # **Team Setup**
 
 
