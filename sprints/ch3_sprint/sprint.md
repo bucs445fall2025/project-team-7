@@ -103,3 +103,8 @@ Python, Node.js, CSS, SQL language
 [List any specific libraries or frameworks your application will use, such as React, Flask, Django, etc.]
 
 React, Flask, Gunicorn, Nginx, MySQL
+
+### **To-do for next sprint**
+
+- Start building basic features like login and signup page.
+- 
