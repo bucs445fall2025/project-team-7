@@ -2,9 +2,9 @@
 
 *note: replace anything surrounded by << >> and **remove** the << >>*
 
-**Attended**: << Hoyeon Yoo, Anthony Zheng, Elif Yildirim >>
+**Attended**: Hoyeon Yoo, Anthony Zheng, Elif Yildirim
 
-**DATE**: << meeting date >>
+**DATE**: 10/06/2025
 
 ***
 
@@ -12,33 +12,29 @@
 
 ### SRS Sections Updated
 
-<< List any SRS sections that were updated in the last sprint >>
-
-
+None
 
 ### User Story
 
-<< Corresponding User Stories completed in this sprint >>
-
-
+No user stories completed in this sprint
 
 ### Sprint Requirements Attempted
 
-<< The corresponding SRS requirement that the team completed in the last sprint >>
-
-
+The corresponding SRS requirement that the team completed in the last sprint 
 
 ### Completed Requirements
 
-<< The work that's been completed in this sprint >>
+Decided on the Tech stack required for the project 
+Did the foundational outlining of the pages required for the project
+Created relational database schema
 
 ### Incomplete Requirements
 
-<< The work that has not been completed in this sprint. Be VERY detailed and specific regarding what isn't working and what needs to be completed >>
+Planned on finishing the first page required for the project as well as inputting an area to get a username and password that would reroute to the main page
 
 ### The summary of the entire project
 
-<< A general overview of the entire project >>
+Creation of an app that can process requests for borrowing a item and lending a item in order to help people out and alleviate financial/ miscellaneous stressors
 
 ***
 
@@ -46,32 +42,39 @@
 
 ## Requirements Flex
 
-<< # >>/3 requirement flexes remaining
+None
 
 ## Technical Debt
 
-<< Any requirements from the previous sprint that are using a technical flex >>
+No Technical Debt so far
 
 ### Requirement Target
 
-<< The corresponding SRS requirement that our team will be complete in next sprint >>
+Functional requirements
+Login and sign-up functionality
+Non-functional requirements
+Think about a clear outline of the project
 
 ### User Stories
 
-<< Corresponding User Stories >>
+As a user, I want to be able to sign up and log in to access the system.
 
 ### Planning
 
-<< Our team's detailed plan to complete the sprint >>
+Create a user table for the database.
+Write a functional backend code for login
+Create a login and sign-up page
 
 ### Action Items
 
-<< A list of things that need to happen in our for our team to complete the sprint >>
+Meet at least twice this week to update each other on our progress
 
 ### Issues and Risks
 
-<< A list of potential obstacles that could keep us from completing the sprint and what's being done about them >>
+Time limit, since some of us have exams coming up
 
 ### Team Work Assignments
 
-<< A list of each team member and their works assignments for this sprint >>
+Anthony Zhang: Finish up the Username page required for the application as well as start on first page 
+Hoyeon Yoo: Write database code
+Elif Yildirim: Work on backend and flesh out the database. =
