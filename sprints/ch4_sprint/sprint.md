@@ -77,4 +77,4 @@ Time limit, since some of us have exams coming up
 
 Anthony Zhang: Finish up the Username page required for the application as well as start on first page 
 Hoyeon Yoo: Write database code
-Elif Yildirim: Work on backend and flesh out the database. =
+Elif Yildirim: Work on backend and flesh out the database.
