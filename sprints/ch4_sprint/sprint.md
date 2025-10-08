@@ -27,6 +27,7 @@ The corresponding SRS requirement that the team completed in the last sprint
 Decided on the Tech stack required for the project 
 Did the foundational outlining of the pages required for the project
 Created relational database schema
+Set up backend structure with modules for Authentication, Items, and Borrow Requests.
 
 ### Incomplete Requirements
 
@@ -50,10 +51,9 @@ No Technical Debt so far
 
 ### Requirement Target
 
-Functional requirements
-Login and sign-up functionality
-Non-functional requirements
-Think about a clear outline of the project
+Functional Requirements: Frontend login & sign-up screens, connect to existing auth APIs, basic session handling, and routing to the main page after login.
+
+Non-Functional Requirements: Keep a clear, organized structure; add basic error handling and request validation at the client boundary.
 
 ### User Stories
 
@@ -62,8 +62,9 @@ As a user, I want to be able to sign up and log in to access the system.
 ### Planning
 
 Create a user table for the database.
-Write a functional backend code for login
-Create a login and sign-up page
+Implement client-side validation and display of API errors.
+Add protected-route handling using the JWT (store token securely, attach Authorization: Bearer <token>).
+Build frontend login & sign-up pages and wire them to /api/auth/*.
 
 ### Action Items
 
@@ -77,4 +78,4 @@ Time limit, since some of us have exams coming up
 
 Anthony Zhang: Finish up the Username page required for the application as well as start on first page 
 Hoyeon Yoo: Write database code
-Elif Yildirim: Work on backend and flesh out the database.
+Elif Yildirim: Work on backend and flesh out the database. Stabilize auth endpoints (edge cases, error messages), enable CORS for frontend, and support frontend integration.
