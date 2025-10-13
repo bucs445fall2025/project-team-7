@@ -1,10 +1,9 @@
 # Sprint Meeting Notes
 
-*note: replace anything surrounded by << >> and **remove** the << >>*
 
-**Attended**: << record the team members in attendance (virtual counts as long as they are participating) >>
+Elif Yildirim, Hoyeon Yoo, Anthony Zhang
 
-**DATE**: << meeting date >>
+10/13/2025
 
 ***
 
@@ -40,32 +39,50 @@
 
 ## Requirements Flex
 
-<< # >>/3 requirement flexes remaining
+2/3 requirement flexes remaining
 
 ## Technical Debt
 
-<< Any requirements from the previous sprint that are using a technical flex >>
+Need to test backend–frontend integration from previous sprint.
+Complete and finalize SRS document to align the project scope.
 
 ### Requirement Target
 
-<< The corresponding SRS requirement that our team will be complete in next sprint >>
+Complete testing between backend and frontend (API endpoints for login, signup, item listing).
+
+Build the main homepage UI.
+
+Finalize and submit SRS draft.
 
 ### User Stories
 
-<< Corresponding User Stories >>
+As a user, I want to see a list of items available for borrowing on the homepage.
+
+As a user, I want to log in from the frontend and access my data from the backend.
 
 ### Planning
 
-<< Our team's detailed plan to complete the sprint >>
+Create and style the main page (item listings).
+
+Draft and review the SRS document for all core requirements.
 
 ### Action Items
 
-<< A list of things that need to happen in our for our team to complete the sprint >>
+Build homepage layout and connect to item data.
+
+Write SRS sections: introduction, system overview, functional/non-functional requirements.
+
+Test database CRUD operations through Prisma.
 
 ### Issues and Risks
 
-<< A list of potential obstacles that could keep us from completing the sprint and what's being done about them >>
+Integration challenges between backend and frontend (CORS, auth token handling).
+
+Possible delays if database schema requires changes after integration.
+
+Risk of misalignment between SRS and implementation if not completed soon.
 
 ### Team Work Assignments
 
-<< A list of each team member and their works assignments for this sprint >>
+Anthony Zhang, Elif Yildirim, Hoyeon Yoo
+
