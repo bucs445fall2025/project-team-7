@@ -2,7 +2,7 @@
 
 *note: replace anything surrounded by << >> and **remove** the << >>*
 
-**Attended**: Hoyeon Yoo, Anthony Zheng, Elif Yildirim
+**Attended**: Hoyeon Yoo, Anthony Zhang, Elif Yildirim
 
 **DATE**: 10/06/2025
 
