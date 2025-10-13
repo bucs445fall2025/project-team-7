@@ -11,11 +11,12 @@ Elif Yildirim, Hoyeon Yoo, Anthony Zhang
 
 ### SRS Sections Updated
 
--No update to SRS 
+https://docs.google.com/document/d/1TCH-ScL2ykkAj_Jr7LRWSu7gMRVRalQO0nbkKwskd-8/edit?usp=sharing
+-no update
 
 ### User Story
 
-<< Corresponding User Stories completed in this sprint >>
+-As a user  I can successfully sign in and log in to system.
 
 ### Sprint Requirements Attempted
 
@@ -35,7 +36,7 @@ Elif Yildirim, Hoyeon Yoo, Anthony Zhang
 
 ### The summary of the entire project
 
-<< A general overview of the entire project >>
+-
 
 ***
 
