@@ -19,7 +19,8 @@ Elif Yildirim, Hoyeon Yoo, Anthony Zhang
 
 ### Sprint Requirements Attempted
 
-<< The corresponding SRS requirement that the team completed in the last sprint >>
+-Tried to create and connect all three sections front end, Prisma and backend so that the username and password could be passed between all three
+
 
 ### Completed Requirements
 
