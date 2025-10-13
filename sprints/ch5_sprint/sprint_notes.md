@@ -11,7 +11,7 @@ Elif Yildirim, Hoyeon Yoo, Anthony Zhang
 
 ### SRS Sections Updated
 
-<< List any SRS sections that were updated in the last sprint >>
+-No update to SRS 
 
 ### User Story
 
@@ -23,11 +23,14 @@ Elif Yildirim, Hoyeon Yoo, Anthony Zhang
 
 ### Completed Requirements
 
-<< The work that's been completed in this sprint >>
+- Front page is functional to take information and send it ot a server
+- Prisma is created to help hold information and send it to the back end 
+- Database backend is created for Username and Passwords
+
 
 ### Incomplete Requirements
 
-<< The work that has not been completed in this sprint. Be VERY detailed and specific regarding what isn't working and what needs to be completed >>
+-Connection between all three parts of the project needs to be fully completed 
 
 ### The summary of the entire project
 
