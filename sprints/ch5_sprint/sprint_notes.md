@@ -75,7 +75,7 @@ Draft and review the SRS document for all core requirements.
 
 Build homepage layout and connect to item data.
 
-Write SRS sections: introduction, system overview, functional/non-functional requirements.
+Updating SRS
 
 Test database CRUD operations through Prisma.
 
