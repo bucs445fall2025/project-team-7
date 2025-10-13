@@ -20,7 +20,7 @@ https://docs.google.com/document/d/1TCH-ScL2ykkAj_Jr7LRWSu7gMRVRalQO0nbkKwskd-8/
 
 ### Sprint Requirements Attempted
 
--Tried to create and connect all three sections front end, Prisma and backend so that the username and password could be passed between all three
+-Tried to create and connect all three sections front end, Prisma and backend so that the username and password could be passed between all three and saved to database
 
 
 ### Completed Requirements
