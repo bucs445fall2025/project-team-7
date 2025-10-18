@@ -23,8 +23,8 @@ id Int @id @default(autoincrement())
 email String @unique
 name String
 password String
-createdAt DateTime @default(now())
-updatedAt DateTime @updatedAt
+joinDate DateTime @default(now())
+posts Post[]
 
 
 items Item[]
@@ -32,17 +32,28 @@ borrowRequests BorrowRequest[] @relation("BorrowerRequests")
 }
 
 
-model Item {
+model Post {
 id Int @id @default(autoincrement())
-title String
-description String @default("")
-imageUrl String?
-location String // campus area text
-isAvailable Boolean @default(true)
-ownerId Int
-createdAt DateTime @default(now())
-updatedAt DateTime @updatedAt
+subject String
+content String @default("")
+user User @relation(fields: [userId], references[id])
+userId Int
+createDate DateTime @default(now())
+modifiedDate DateTime @updatedAt
+postType Int
+tag Int
 
+model Tag {
+    id Int
+    tagName String
+    posts Post[]
+}
+
+model PostType {
+    id Int
+    typeName String
+    posts Post[]
+}
 
 owner User @relation(fields: [ownerId], references: [id])
 borrowRequests BorrowRequest[]
