@@ -12,27 +12,27 @@ Elif Yildirim, Hoyeon Yoo, Anthony Zhang
 ### SRS Sections Updated
 
 https://docs.google.com/document/d/1TCH-ScL2ykkAj_Jr7LRWSu7gMRVRalQO0nbkKwskd-8/edit?usp=sharing
--no update
+- no update
 
 ### User Story
 
--As a user  I can successfully sign in and log in to system.
+- As a user,  I can successfully sign in and log in to system.
 
 ### Sprint Requirements Attempted
 
--Tried to create and connect all three sections front end, Prisma and backend so that the username and password could be passed between all three and saved to database
+- Tried to create and connect all three sections front end, Prisma and backend so that the username and password could be passed between all three and saved to database
 
 
 ### Completed Requirements
 
-- Front page is functional to take information and send it ot a server
+- Front page is functional to take information and send it to a server
 - Prisma is created to help hold information and send it to the back end 
 - Database backend is created for Username and Passwords
 
 
 ### Incomplete Requirements
 
--Connection between all three parts of the project needs to be fully completed 
+- Connection between all three parts of the project needs to be fully completed 
 
 ### The summary of the entire project
 
@@ -53,21 +53,23 @@ Complete and finalize SRS document to align the project scope.
 
 ### Requirement Target
 
-Complete testing between backend and frontend (API endpoints for login, signup, item listing).
+Complete testing between backend, frontend, and database.
 
-Build the main homepage UI.
+Build the basic layout of mainpage.
 
 Finalize and submit SRS draft.
 
-### User Stories
+Test CRUD operations.
 
-As a user, I want to see a list of items available for borrowing on the homepage.
+### User Stories
 
 As a user, I want to log in from the frontend and access my data from the backend.
 
+As a user, I want to see basic layout when I enter the main page.
+
 ### Planning
 
-Create and style the main page (item listings).
+Create and style the main page.
 
 Draft and review the SRS document for all core requirements.
 
@@ -89,5 +91,9 @@ Risk of misalignment between SRS and implementation if not completed soon.
 
 ### Team Work Assignments
 
-Anthony Zhang, Elif Yildirim, Hoyeon Yoo
+Anthony Zhang: Build a basic layout of main page 
+
+Elif Yildirim: Connect backend with database 
+
+Hoyeon Yoo: Push database and work on database access
 
