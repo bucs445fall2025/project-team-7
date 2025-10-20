@@ -60,13 +60,7 @@ Backend integration will focus on API endpoints required for the mapping feature
 ### Requirement Target
 Design mainpage with categories, chat buttons, 
 
-Integrate map display and interaction on the main page.
-
-Connect map to backend to fetch and display items by location.
-
 Build main page UI skeleton with placeholder components for “Chat” button.
-
-Ensure frontend-backend communication works for item data retrieval.
 
 ### User Stories
 As a user, I want to view dropdown menu when I enter the mainpage.
