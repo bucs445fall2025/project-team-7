@@ -21,11 +21,11 @@ export default function Main() {
               <p>Manage your account settings</p>
             </div>
             <div className= 'Infoslider'>
-              <h3>Projects</h3>
+              <h3>Lend</h3>
               <p>View and manage your projects</p>
             </div>
             <div className= 'Infoslider'>
-              <h3>Settings</h3>
+              <h3>Borrow</h3>
               <p>Configure your preferences</p>
             </div>
           </div>
