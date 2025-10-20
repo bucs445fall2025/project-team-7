@@ -109,7 +109,7 @@ Time allocation challenges for balancing new feature work with bug fixes.
 Anthony Zhang: 
 Start designing main page UI (layout, color theme, and button placement).
 
-Implement “Request” and “Chat” button prototypes.
+Implement “Chat” button prototypes.
 
 Collaborate with Elif to ensure map integrates smoothly into the page layout.
 Elif Yildirim: 
