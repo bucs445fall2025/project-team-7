@@ -9,6 +9,7 @@ export default function Routingpage() {
     <Routes>
       <Route path="/" element={<Login />} />
       <Route path="/main" element={<Mainpage />} />
+
     </Routes>
   );
 }
