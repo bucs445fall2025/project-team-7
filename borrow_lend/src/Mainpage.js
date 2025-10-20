@@ -22,11 +22,11 @@ export default function Main() {
             </div>
             <div className= 'Infoslider'>
               <h3>Lend</h3>
-              <p>View and manage your projects</p>
+              <p>View Lending options</p>
             </div>
             <div className= 'Infoslider'>
               <h3>Borrow</h3>
-              <p>Configure your preferences</p>
+              <p>View Borrowing options</p>
             </div>
           </div>
         </section>
