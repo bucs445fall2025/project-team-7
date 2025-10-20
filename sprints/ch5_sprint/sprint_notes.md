@@ -95,5 +95,5 @@ Anthony Zhang: Build a basic layout of main page
 
 Elif Yildirim: Connect backend with database 
 
-Hoyeon Yoo: Push database and work on database access
+Hoyeon Yoo: Push database, work on database access, and test CRUD on prisma
 
