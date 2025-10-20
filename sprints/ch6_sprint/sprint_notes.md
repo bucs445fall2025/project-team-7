@@ -73,8 +73,6 @@ As a user, I want to view dropdown menu when I enter the mainpage.
 
 As a user, I want buttons to send requests or open chat windows for items directly from the main page.
 
-As a developer, I want to integrate the map API with backend data so that the item listings appear dynamically.
-
 ### Planning
 Come up with mainpage layout with requests, categories, etc.
 
