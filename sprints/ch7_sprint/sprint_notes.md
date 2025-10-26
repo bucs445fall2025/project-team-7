@@ -12,7 +12,8 @@
 
 ### SRS Sections Updated
 
-<< List any SRS sections that were updated in the last sprint >>
+-https://docs.google.com/document/d/1TCH-ScL2ykkAj_Jr7LRWSu7gMRVRalQO0nbkKwskd-8/edit?usp=sharing
+- added user interface 
 
 ### User Story
 
