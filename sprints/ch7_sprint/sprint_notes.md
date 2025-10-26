@@ -1,14 +1,13 @@
- Sprint Meeting Notes
+Sprint Meeting Notes
 
 *note: replace anything surrounded by << >> and **remove** the << >>*
 
-**Attended**: << record the team members in attendance (virtual counts as long as they are participating) >>
-
-**DATE**: << meeting date >>
+**Attended**: Elif Yildirim, Hoyeon Yoo, Anthony Zheng
+**DATE**: 10/26/2025
 
 ***
 
-## Sprint << num >> Review
+## Sprint 6 Review
 
 ### SRS Sections Updated
 
@@ -17,56 +16,77 @@
 
 ### User Story
 
-<< Corresponding User Stories completed in this sprint >>
+As a user, I want to view dropdown menu when I enter the mainpage.
+
+As a user, I want buttons to send requests or open chat windows for items directly from the main page.
 
 ### Sprint Requirements Attempted
 
-<< The corresponding SRS requirement that the team completed in the last sprint >>
+Design mainpage with categories, chat buttons,
+
+Build main page UI skeleton with placeholder components for “Chat” button.
 
 ### Completed Requirements
 
-<< The work that's been completed in this sprint >>
+Design mainpage with categories, chat buttons,
+
+Build main page UI skeleton with placeholder components for “Chat” button.
 
 ### Incomplete Requirements
 
-<< The work that has not been completed in this sprint. Be VERY detailed and specific regarding what isn't working and what needs to be completed >>
 
 ### The summary of the entire project
 
-<< A general overview of the entire project >>
+Borrow & Lend is a web application that connects students who need an item with those who already have it.
+
+Through an intuitive interface, users can list items they’re willing to lend, browse available items, send borrow requests, and track lending status
 
 ***
 
-## Sprint << num >> Planning
+## Sprint 7 Planning
 
 ## Requirements Flex
 
-<< # >>/5 requirement flexes remaining
+5/5 requirement flexes remaining
 
 ## Technical Debt
 
-<< Any requirements from the previous sprint that are using a technical flex >>
-
 ### Requirement Target
 
-<< The corresponding SRS requirement that our team will be complete in next sprint >>
+Build item request functionality
 
 ### User Stories
 
-<< Corresponding User Stories >>
+As a user, I want to requeset an item to borrow
 
 ### Planning
 
-<< Our team's detailed plan to complete the sprint >>
+Build request form for users to write, when requesting an item
+
+Show the requests on mainpage as a list
 
 ### Action Items
 
-<< A list of things that need to happen in our for our team to complete the sprint >>
+Add an item table in database and corresponding relationships
+
+Create request button that leads to request form
+
+Show list of requests
+
+Send request form to database to store
 
 ### Issues and Risks
 
-<< A list of potential obstacles that could keep us from completing the sprint and what's being done about them >>
+Risk of merge conflicts due to simultaneous frontend and backend edits.
 
 ### Team Work Assignments
 
-<< A list of each team member and their works assignments for this sprint >>
+Anthony Zheng: 
+- Create request button that leads to request form on mainpage.
+- Show requests on page
+
+Elif Yildirim:
+- Send request form to database
+
+Hoyeon Yoo:
+- Make item table and corresponding relationships (table) to store requests
