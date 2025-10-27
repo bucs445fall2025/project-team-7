@@ -93,7 +93,7 @@ return (
   <div className="container">
     <header className="header">
       <div className="header-content">
-        <h1 className="h1">Main Page</h1>
+        <h1 className="h1">Lending Info</h1>
         <button
           onClick={addCategory}
           className="addcategory"
@@ -163,7 +163,7 @@ return (
                             className="delete-item-btn"
                             title="Delete"
                           >
-                            🗑️
+                            Delete
                           </button>
                         </div>
                         <textarea
