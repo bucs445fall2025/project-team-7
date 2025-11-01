@@ -1,39 +1,59 @@
 // Prisma schema
 generator client {
-provider = "prisma-client-js"
+    provider = "prisma-client-js"
 }
-
 
 datasource db {
-provider = "mysql"
-url = env("DATABASE_URL")
+    provider = "mysql"
+    url = env("DATABASE_URL")
 }
-
-
-enum RequestStatus {
-PENDING
-APPROVED
-DECLINED
-CANCELED
-}
-
 
 model User {
-id Int @id @default(autoincrement())
-email String @unique
-name String
-password String
-joinDate DateTime @default(now())
-posts Post[]
+    id Int @id @default(autoincrement())
+    email String @unique
+    name String
+    password String
+    joinDate DateTime @default(now())
+    requestsMade Request[]
+    requestOwned
 }
 
+model Request {
+    id Int @id @default(autoincrement())
+    requestUser User 
+    requestUserId Int 
+    subject String
+    content String
+    category String 
+    desiredDate DateTime
+    status RequestStatus
+    CreateDate DateTime @default(now())
+    modifiedDate DateTime @updatedAt
+}
 
-model Post {
-id Int @id @default(autoincrement())
-subject String
-content String @default("")
-user User @relation(fields: [userId], references: [id])
-userId Int
-createDate DateTime @default(now())
-modifiedDate DateTime @updatedAt
+model BorrowTransaction {
+    id Int @id @default(autoincrement())
+    request Request @relation(fields: [requestId], references: [id])
+    requestId Int 
+    borrower User @relation("BorrowerRecords", fields: [borrowerId], references: [id])
+    borrowerId Int
+    lender User @relation("LenderRecords", fields: [lenderId], references: [id])
+    lenderId Int
+    startDate DateTime
+    endDate DateTime
+    status BorrowStatus @default(ONGOING)
+    createdDate DateTime @default(now())
+}
+
+enum RequestStatus {
+    PENDING
+    APPROVED
+    DECLINED
+    CANCELED
+}
+
+enum BorrowStatus {
+    ONGOING
+    RETURNED
+    OVERDUE
 }
