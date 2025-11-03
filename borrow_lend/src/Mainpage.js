@@ -1,9 +1,11 @@
+import { useNavigate } from 'react-router-dom';
 import './Mainpage.css';
 import { useState } from 'react';
 
 export default function Main() {
   const [categories, setCategories] = useState([]);
   const [expandedCategories, setExpandedCategories] = useState({});
+  const navigate = useNavigate();
 const addCategory = () => {
   const newCategory = {
     id: Date.now(),
@@ -97,7 +99,17 @@ return (
         <button
           onClick={addCategory}
           className="addcategory"
-          title="Add Category">+
+          title="Add Category">Add Category
+        </button>
+         <button
+           onClick={() => navigate('/form')}
+          className="addcategory"
+          title="Request">Request
+        </button>
+         <button
+         onClick={() => navigate('/chat')}
+          className="addcategory"
+          title="Chat"> Chat
         </button>
       </div>
     </header>

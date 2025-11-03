@@ -98,7 +98,7 @@ export default function Login() {
         >
           {isLogin ? 'Switch to Register' : 'Switch to Login'}
         </button>
-        <Link to='/Main' className="nav-link">
+        <Link to='/main' className="nav-link">
           <button className="app-button" type="button">
             Home    
           </button>
