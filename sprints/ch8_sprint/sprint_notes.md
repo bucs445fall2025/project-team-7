@@ -10,8 +10,8 @@ Sprint Meeting Notes
 ## Sprint 7 Review
 
 ### SRS Sections Updated
-
-
+- added bugs section
+https://docs.google.com/document/d/1TCH-ScL2ykkAj_Jr7LRWSu7gMRVRalQO0nbkKwskd-8/edit?usp=sharing
 
 ### User Story
 As a user, I want to requeset an item to borrow
