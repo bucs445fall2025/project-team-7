@@ -56,7 +56,7 @@ export default function Form () {
     <div className="container">
       <div className="header">
         <div className="header-content">
-          <h1 className="h1">Info Item Form </h1>     
+          <h1 className="h1">Info Item </h1>     
           <div className="main-content">
             <div>
               <label className="h1">

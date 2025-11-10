@@ -3,9 +3,16 @@ import './Mainpage.css';
 import { useState } from 'react';
 
 export default function Main() {
-  const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState([
+    { id: 1, name: 'Writing Utensils',infoBoxes:[]   },
+    { id: 2, name: 'Calculators',infoBoxes:[]  },
+    { id: 3, name: 'Notebooks' ,infoBoxes:[] },
+    { id: 4, name: 'Cleaning Supllies' ,infoBoxes:[] },
+    { id: 5, name: 'Miscellaneous' ,infoBoxes:[] }
+  ]);
   const [expandedCategories, setExpandedCategories] = useState({});
   const navigate = useNavigate();
+
 const addCategory = () => {
   const newCategory = {
     id: Date.now(),
@@ -92,6 +99,7 @@ const toggleCategory = (categoryId) => {
 };
 
 return (
+
   <div className="container">
     <header className="header">
       <div className="header-content">
