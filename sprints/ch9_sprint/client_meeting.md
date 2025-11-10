@@ -2,29 +2,33 @@
 
 ## SRS Section(s)Updated
 
+- Known Bugs
 
 ## Requirements Attempted in this Sprint
 
+- Send request form to database
+- Create dropdown with categories
 
 ## Requirements complete
 
+- Send request form to database
+- Create dropdown with categories
 
 ## Requirements incomplete
 
+- None
 
 ## Requirement Flex Remaining
 
 3/3
 
-## Requirements Attempted in next Sprint
-
-
 ## Milestone Status
 
+Pass
 
-## Requested Changes
+## Remaining Required Features
 
+- Reports
 
-## Additional Notes
 
 
