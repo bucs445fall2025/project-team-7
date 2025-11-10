@@ -5,11 +5,12 @@ import './requestform.css';
 export default function Form () {
   const [formData, setFormData] = useState({
     label: '',
-    description: ''
+    description: '',
+    category:''
   });
   const [submittedItems, setSubmittedItems] = useState([]);
   const [editingId, setEditingId] = useState(null);
-
+  const categories = ['Writing Utensils','Calculators','Notebooks','Cleaning Supplies','Miscellaneous'];
   const handleSubmit = () => {
     if (!formData.label.trim()) {
       alert('Please enter a label');
@@ -70,6 +71,30 @@ export default function Form () {
                 className="info-box-label"
               />
             </div>
+
+
+
+
+             <div>
+              <label className="h1">
+                Category
+              </label>
+              <select
+                value={formData.category}
+                onChange={(e) => setFormData({ ...formData, category: e.target.value })}
+                className="info-box-label"
+              >
+                <option value="">Select a category...</option>
+                {categories.map((cat, index) => (
+                  <option key={index} value={cat}>
+                    {cat}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+
+            
 
             <div>
               <label className="h1">
