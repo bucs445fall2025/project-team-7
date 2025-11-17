@@ -71,6 +71,8 @@ Review the project and document as a team
 
 ### Issues and Risks
 
+Test failures
+
 ### Team Work Assignments
 
-Anthony Zheng, Elif Yildirim, Hoyeon Yoo: Reviw the project and document
+Anthony Zheng, Elif Yildirim, Hoyeon Yoo: Reveiw the project and document
