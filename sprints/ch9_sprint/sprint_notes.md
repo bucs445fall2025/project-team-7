@@ -53,23 +53,17 @@ Design the main page (layout)
 
 Create chat box button and layout
 
-Develop email verification
-
 ### User Stories
 
 As a user, I want to see a clean layout when I enter the main page.
 
 As a user, I want to see a chat button.
 
-As a user, I want to be verified as binghamton student.
-
 ### Planning
 
 Discuss and decide the layout of main page as well as other pages
 
 Add chatbox button to requests
-
-Add email verification feature in our login system
 
 ### Action Items
 
