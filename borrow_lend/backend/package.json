@@ -3,6 +3,9 @@
     "version": "1.0.0",
     "private": true,
     "type": "module",
+    "prisma": {
+        "seed": "tsx prisma/seed.ts"
+    },
     "scripts": {
         "dev": "tsx watch src/index.ts",
         "build": "tsc -p .",
@@ -10,10 +13,12 @@
         "prisma:generate": "prisma generate",
         "prisma:migrate": "prisma migrate dev --name init",
         "prisma:studio": "prisma studio",
-        "seed": "tsx prisma/seed.ts"
+        "seed": "tsx prisma/seed.ts",
+        "delete-user": "tsx delete-user.ts",
+        "update-emails": "tsx update-user-emails.ts"
     },
     "dependencies": {
-        "@prisma/client": "^6.17.1",
+        "@prisma/client": "^5.20.0",
         "bcryptjs": "^2.4.3",
         "cors": "^2.8.5",
         "dotenv": "^16.4.5",
@@ -28,7 +33,7 @@
         "@types/express": "^5.0.3",
         "@types/jsonwebtoken": "^9.0.10",
         "@types/node": "^24.6.2",
-        "prisma": "^6.17.1",
+        "prisma": "^5.20.0",
         "tsx": "^4.16.2",
         "typescript": "^5.6.2"
     }

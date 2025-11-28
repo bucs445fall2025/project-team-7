@@ -1,13 +1,24 @@
 import './App.css';
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 
 export default function Login() {
+  const [searchParams] = useSearchParams();
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
   const [isLogin, setIsLogin] = useState(true);
+  const navigate = useNavigate();
+
+  // Check if register parameter is in URL
+  useEffect(() => {
+    if (searchParams.get('register') === 'true') {
+      setIsLogin(false);
+    }
+  }, [searchParams]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,7 +29,7 @@ export default function Login() {
         ? { email, password }
         : { email, password, name };
 
-      const response = await fetch(`http://localhost:3000${endpoint}`, {
+      const response = await fetch(`${API_URL}/api/auth${endpoint}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -32,10 +43,13 @@ export default function Login() {
         sessionStorage.setItem('token', data.token);
         sessionStorage.setItem('user', JSON.stringify(data.user));
         
-        setMessage('Success!');
+        setMessage('Success! Redirecting...');
         setEmail('');
         setName(''); 
         setPassword('');
+        setTimeout(() => {
+          navigate('/main');
+        }, 1000);
       } else {
         setMessage(data.error || 'An error occurred');
       }
@@ -98,9 +112,9 @@ export default function Login() {
         >
           {isLogin ? 'Switch to Register' : 'Switch to Login'}
         </button>
-        <Link to='/main' className="nav-link">
+        <Link to='/' className="nav-link">
           <button className="app-button" type="button">
-            Home    
+            Back to Home    
           </button>
         </Link>
       </header>

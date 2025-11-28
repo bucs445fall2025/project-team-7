@@ -1,59 +1,152 @@
 // Prisma schema
 generator client {
-    provider = "prisma-client-js"
+provider = "prisma-client-js"
 }
+
 
 datasource db {
-    provider = "mysql"
-    url = env("DATABASE_URL")
+provider = "mysql"
+url = env("DATABASE_URL")
 }
 
-model User {
-    id Int @id @default(autoincrement())
-    email String @unique
-    name String
-    password String
-    joinDate DateTime @default(now())
-    requestsMade Request[]
-    requestOwned
-}
-
-model Request {
-    id Int @id @default(autoincrement())
-    requestUser User 
-    requestUserId Int 
-    subject String
-    content String
-    category String 
-    desiredDate DateTime
-    status RequestStatus
-    CreateDate DateTime @default(now())
-    modifiedDate DateTime @updatedAt
-}
-
-model BorrowTransaction {
-    id Int @id @default(autoincrement())
-    request Request @relation(fields: [requestId], references: [id])
-    requestId Int 
-    borrower User @relation("BorrowerRecords", fields: [borrowerId], references: [id])
-    borrowerId Int
-    lender User @relation("LenderRecords", fields: [lenderId], references: [id])
-    lenderId Int
-    startDate DateTime
-    endDate DateTime
-    status BorrowStatus @default(ONGOING)
-    createdDate DateTime @default(now())
-}
 
 enum RequestStatus {
-    PENDING
-    APPROVED
-    DECLINED
-    CANCELED
+PENDING
+APPROVED
+DECLINED
+CANCELED
 }
 
-enum BorrowStatus {
-    ONGOING
-    RETURNED
-    OVERDUE
+
+model User {
+id Int @id @default(autoincrement())
+email String @unique
+name String
+password String
+createdAt DateTime @default(now())
+updatedAt DateTime @updatedAt
+
+
+items Item[]
+borrowRequests BorrowRequest[] @relation("BorrowerRequests")
+sentMessages Message[] @relation("SenderMessages")
+receivedMessages Message[] @relation("ReceiverMessages")
+conversationsAsUser1 Conversation[] @relation("User1Conversations")
+conversationsAsUser2 Conversation[] @relation("User2Conversations")
+}
+
+
+model Item {
+id Int @id @default(autoincrement())
+title String
+description String @default("")
+imageUrl String?
+location String // campus area text
+isAvailable Boolean @default(true)
+ownerId Int
+createdAt DateTime @default(now())
+updatedAt DateTime @updatedAt
+
+
+owner User @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+borrowRequests BorrowRequest[]
+}
+
+
+model BorrowRequest {
+id Int @id @default(autoincrement())
+itemId Int? // Optional for backward compatibility
+categoryId Int
+borrowerId Int
+title String // What they want to borrow (e.g., "Pen", "Laptop")
+description String @default("")
+message String @default("")
+startDate DateTime?
+endDate DateTime?
+status RequestStatus @default(PENDING)
+createdAt DateTime @default(now())
+updatedAt DateTime @updatedAt
+
+
+item Item? @relation(fields: [itemId], references: [id], onDelete: Cascade)
+category Category @relation(fields: [categoryId], references: [id])
+borrower User @relation("BorrowerRequests", fields: [borrowerId], references: [id], onDelete: Cascade)
+conversations Conversation[]
+
+
+@@index([itemId])
+@@index([borrowerId])
+@@index([categoryId])
+}
+
+
+model Category {
+id Int @id @default(autoincrement())
+name String @unique // Global categories, unique names
+icon String? // Optional icon/emoji
+description String @default("")
+createdAt DateTime @default(now())
+updatedAt DateTime @updatedAt
+
+
+borrowRequests BorrowRequest[]
+infoBoxes InfoBox[]
+}
+
+
+model InfoBox {
+id Int @id @default(autoincrement())
+label String
+description String @default("")
+categoryId Int
+createdAt DateTime @default(now())
+updatedAt DateTime @updatedAt
+
+
+category Category @relation(fields: [categoryId], references: [id])
+
+
+@@index([categoryId])
+}
+
+model Conversation {
+id Int @id @default(autoincrement())
+user1Id Int
+user2Id Int
+requestId Int? // Optional: related to a borrow request
+createdAt DateTime @default(now())
+updatedAt DateTime @updatedAt
+
+
+user1 User @relation("User1Conversations", fields: [user1Id], references: [id], onDelete: Cascade)
+user2 User @relation("User2Conversations", fields: [user2Id], references: [id], onDelete: Cascade)
+request BorrowRequest? @relation(fields: [requestId], references: [id], onDelete: Cascade)
+messages Message[]
+
+
+@@index([user1Id])
+@@index([user2Id])
+@@index([requestId])
+@@unique([user1Id, user2Id])
+}
+
+model Message {
+id Int @id @default(autoincrement())
+conversationId Int
+senderId Int
+receiverId Int
+content String
+read Boolean @default(false)
+createdAt DateTime @default(now())
+
+
+conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+sender User @relation("SenderMessages", fields: [senderId], references: [id], onDelete: Cascade)
+receiver User @relation("ReceiverMessages", fields: [receiverId], references: [id], onDelete: Cascade)
+
+
+@@index([conversationId])
+@@index([senderId])
+@@index([receiverId])
+@@index([createdAt])
 }
