@@ -150,7 +150,11 @@ Database data is permanently stored in a Docker volume:
 - Volume name: `project-team-7_mysql_data`
 - Data will **NOT BE LOST** when you run `docker-compose down`
 
-**Important:** The `mysql-data/` folder is not needed and is ignored by git. Docker automatically creates a volume for MySQL data storage.
+**Important:** 
+- The `mysql-data/` folder is **NOT needed** and is ignored by git
+- If you download the project as a ZIP file, the `mysql-data/` folder will **NOT be included** (and it shouldn't be)
+- Docker automatically creates a volume for MySQL data storage when you run `docker-compose up`
+- You can safely delete the `mysql-data/` folder if it exists - Docker will recreate it automatically
 
 ### To completely delete the database:
 

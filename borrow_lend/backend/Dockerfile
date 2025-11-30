@@ -27,20 +27,8 @@ COPY start-prisma-studio.js /app/start-prisma-studio.js
 RUN chmod +x /app/start.sh
 RUN chmod +x /app/start-prisma-studio.js
 
-<<<<<<< HEAD
-FROM node:20-alpine
-WORKDIR /app
-ENV NODE_ENV=production
-COPY --from=base /app/node_modules ./node_modules
-COPY --from=base /app/dist ./dist
-COPY prisma ./prisma
-COPY package.json ./package.json
-EXPOSE 8000
-CMD ["sh", "-c", "npx prisma generate && npx prisma migrate deploy && node dist/src/index.js"]
-=======
 # Expose ports
 EXPOSE 8000 5555
 
 # Start the application and Prisma Studio
 CMD ["/app/start.sh"]
->>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
