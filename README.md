@@ -1,6 +1,5 @@
 # Borrow & Lend
 
-<<<<<<< HEAD
 **CS 445 Final Project**  
 **Fall 2025**
 
