@@ -15,7 +15,7 @@
 ## Getting Started
 
 Borrow & Lend is a campus community platform that enables students to share and borrow items with each other. Users can browse items by category, create borrow requests, list items they own, and communicate with other users through an integrated chat system. The platform facilitates resource sharing within the campus community, making it easy to find and borrow items like textbooks, electronics, tools, and more.
-<<<<<<< HEAD
+
 
 ## Roadmap
 
@@ -32,7 +32,7 @@ A list of features, functional or non-functional, we would like to add in the fu
 
 ## SRS Document
 
-See `REQUIREMENTS_ANALYSIS.md` for the Software Requirements Specification document.
+https://docs.google.com/document/d/1TCH-ScL2ykkAj_Jr7LRWSu7gMRVRalQO0nbkKwskd-8/edit?usp=sharing
 
 ## Prerequisites
 
