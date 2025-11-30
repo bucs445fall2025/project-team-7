@@ -1,4 +1,8 @@
-<<<<<<< HEAD
+# Environment variables (NEVER commit these!)
+.env
+.env.*
+!.env.example
+
 # Dependencies
 node_modules/
 **/node_modules/
@@ -8,57 +12,14 @@ dist/
 **/dist/
 build/
 **/build/
+*.tsbuildinfo
 
 # Database data (Docker volumes)
 mysql-data/
 **/mysql-data/
-*.sqlite
-*.db
-
-# Environment files
-.env
-.env.local
-.env.*.local
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Logs
-*.log
-=======
-# Environment variables (NEVER commit these!)
-.env
-.env.*
-!.env.example
-
-# Dependencies
-node_modules/
->>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-<<<<<<< HEAD
-# Temporary files
-*.tmp
-*.temp
-=======
-# Build outputs
-dist/
-build/
-*.tsbuildinfo
-
-# Database files
 *.db
 *.db-journal
-mysql-data/
+*.sqlite
 prisma/dev.db
 prisma/dev.db-journal
 
@@ -81,11 +42,15 @@ Thumbs.db
 # Logs
 logs/
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Temporary files
 tmp/
 temp/
 *.tmp
+*.temp
 
 # Docker volumes
 mysql-data/
@@ -97,8 +62,3 @@ coverage/
 # Scripts (if they contain sensitive data)
 delete-user.ts
 update-user-emails.ts
-
-
-
->>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
-
