@@ -48,11 +48,7 @@ createdAt DateTime @default(now())
 updatedAt DateTime @updatedAt
 
 
-<<<<<<< HEAD
-owner User @relation(fields: [ownerId], references: [id])
-=======
 owner User @relation(fields: [ownerId], references: [id], onDelete: Cascade)
->>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
 borrowRequests BorrowRequest[]
 }
 
@@ -72,15 +68,9 @@ createdAt DateTime @default(now())
 updatedAt DateTime @updatedAt
 
 
-<<<<<<< HEAD
-item Item? @relation(fields: [itemId], references: [id])
-category Category @relation(fields: [categoryId], references: [id])
-borrower User @relation("BorrowerRequests", fields: [borrowerId], references: [id])
-=======
 item Item? @relation(fields: [itemId], references: [id], onDelete: Cascade)
 category Category @relation(fields: [categoryId], references: [id])
 borrower User @relation("BorrowerRequests", fields: [borrowerId], references: [id], onDelete: Cascade)
->>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
 conversations Conversation[]
 
 
@@ -128,15 +118,9 @@ createdAt DateTime @default(now())
 updatedAt DateTime @updatedAt
 
 
-<<<<<<< HEAD
-user1 User @relation("User1Conversations", fields: [user1Id], references: [id])
-user2 User @relation("User2Conversations", fields: [user2Id], references: [id])
-request BorrowRequest? @relation(fields: [requestId], references: [id])
-=======
 user1 User @relation("User1Conversations", fields: [user1Id], references: [id], onDelete: Cascade)
 user2 User @relation("User2Conversations", fields: [user2Id], references: [id], onDelete: Cascade)
 request BorrowRequest? @relation(fields: [requestId], references: [id], onDelete: Cascade)
->>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
 messages Message[]
 
 
@@ -156,23 +140,13 @@ read Boolean @default(false)
 createdAt DateTime @default(now())
 
 
-<<<<<<< HEAD
-conversation Conversation @relation(fields: [conversationId], references: [id])
-sender User @relation("SenderMessages", fields: [senderId], references: [id])
-receiver User @relation("ReceiverMessages", fields: [receiverId], references: [id])
-=======
 conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
 sender User @relation("SenderMessages", fields: [senderId], references: [id], onDelete: Cascade)
 receiver User @relation("ReceiverMessages", fields: [receiverId], references: [id], onDelete: Cascade)
->>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
 
 
 @@index([conversationId])
 @@index([senderId])
 @@index([receiverId])
 @@index([createdAt])
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
