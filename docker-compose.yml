@@ -1,0 +1,97 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: borrow-lend-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: borrow_lend
+      MYSQL_USER: appuser
+      MYSQL_PASSWORD: apppassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-prootpassword"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./borrow_lend/backend
+      dockerfile: Dockerfile
+    container_name: borrow-lend-backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      NODE_ENV: production
+      PORT: 8000
+      DATABASE_URL: mysql://appuser:apppassword@mysql:3306/borrow_lend?charset=utf8mb4
+      JWT_SECRET: ${JWT_SECRET:-your-secret-key-change-in-production}
+      CORS_ORIGIN: ${CORS_ORIGIN:-*}
+    depends_on:
+      mysql:
+        condition: service_healthy
+      seed:
+        condition: service_completed_successfully
+    volumes:
+      - ./borrow_lend/backend/prisma:/app/prisma
+
+  seed:
+    build:
+      context: ./borrow_lend/backend
+      dockerfile: Dockerfile.seed
+    container_name: borrow-lend-seed
+    environment:
+      DATABASE_URL: mysql://appuser:apppassword@mysql:3306/borrow_lend?charset=utf8mb4
+    depends_on:
+      mysql:
+        condition: service_healthy
+    volumes:
+      - ./borrow_lend/backend/prisma:/app/prisma
+    restart: "no"
+
+  prisma-studio:
+    build:
+      context: ./borrow_lend/backend
+      dockerfile: Dockerfile
+    container_name: borrow-lend-prisma-studio
+    restart: unless-stopped
+    ports:
+      - "5555:5555"
+    environment:
+      DATABASE_URL: mysql://appuser:apppassword@mysql:3306/borrow_lend?charset=utf8mb4
+    command: sh -c "npx prisma generate && npx prisma studio --hostname 0.0.0.0 --port 5555"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      backend:
+        condition: service_started
+    volumes:
+      - ./borrow_lend/backend/prisma:/app/prisma
+
+  frontend:
+    build:
+      context: ./borrow_lend/frontend
+      dockerfile: Dockerfile
+    container_name: borrow-lend-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      REACT_APP_API_URL: http://localhost:8000
+      CHOKIDAR_USEPOLLING: true
+      BROWSER: none
+    depends_on:
+      - backend
+    volumes:
+      - ./borrow_lend/frontend/src:/app/src
+      - ./borrow_lend/frontend/public:/app/public
+      - /app/node_modules
+
+volumes:
+  mysql_data:
+
