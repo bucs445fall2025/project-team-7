@@ -25,7 +25,7 @@ A list of features, functional or non-functional, we would like to add in the fu
 
 ## SRS Document
 
-See `REQUIREMENTS_ANALYSIS.md` for the Software Requirements Specification document.
+See `REQUIREMENTS_ANALYSIS.md` for the Software Requirements Specification document, or view online: https://docs.google.com/document/d/1TCH-ScL2ykkAj_Jr7LRWSu7gMRVRalQO0nbkKwskd-8/edit?usp=sharing
 
 ## Prerequisites
 
