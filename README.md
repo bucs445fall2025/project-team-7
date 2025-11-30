@@ -401,7 +401,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-<<<<<<< HEAD
+
 - CS 445 Course Staff for project guidance
 - React and Express communities for excellent documentation
 - Prisma team for the amazing ORM tooling
@@ -409,4 +409,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 * CS 445 Course Staff for project guidance
 * React and Express communities for excellent documentation
 * Prisma team for the amazing ORM tooling
->>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
+
