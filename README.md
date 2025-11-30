@@ -44,7 +44,7 @@ cd borrow_lend/backend
 npm install prisma@5.20.0 @prisma/client@5.20.0 --save-exact
 ```
 
-See `borrow_lend/backend/PRISMA_FIX.md` for more details.
+**Note:** The `package.json` already specifies Prisma 5.20.0, so running `npm install` will automatically install the correct version.
 
 ## Installing
 
