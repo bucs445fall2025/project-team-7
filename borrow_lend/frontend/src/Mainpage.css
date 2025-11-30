@@ -182,10 +182,13 @@
   margin-bottom: 1rem;
   display: block;
   transition: transform 0.3s ease;
+<<<<<<< HEAD
   font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "EmojiOne Color", "Android Emoji", sans-serif;
   line-height: 1;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+=======
+>>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
 }
 
 .category-tile:hover .category-icon {

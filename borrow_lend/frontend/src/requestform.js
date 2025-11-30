@@ -96,7 +96,11 @@ export default function Form() {
       });
 
       if (response.ok) {
+<<<<<<< HEAD
         await response.json();
+=======
+        const data = await response.json();
+>>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
         setSuccess('Request created successfully!');
         // Reset form
         setFormData({

@@ -3,6 +3,7 @@ FROM node:20-alpine
 WORKDIR /app
 
 # Copy package files
+<<<<<<< HEAD
 COPY package.json package-lock.json* ./
 
 # Install dependencies
@@ -22,3 +23,18 @@ ENV BROWSER=none
 # Start the development server
 CMD ["npm", "start"]
 
+=======
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy source code
+COPY . .
+
+# Expose port
+EXPOSE 3000
+
+# Start the application
+CMD ["npm", "start"]
+>>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c

@@ -58,6 +58,12 @@ update: {}
 }
 console.log("Categories created/updated");
 
+// Create items if they don't exist
+const existingItems = await prisma.item.findMany({
+where: { ownerId: user.id }
+});
+
+if (existingItems.length === 0) {
 await prisma.item.createMany({
 data: [
 { title: "Graphing Calculator", description: "TI‑84", location: "CIW", ownerId: user.id },
@@ -65,7 +71,30 @@ data: [
 ],
 skipDuplicates: true
 });
+<<<<<<< HEAD
 console.log("Items created");
+=======
+}
+
+
+// Create categories
+const categories = [
+{ name: "Stationery", icon: "📝", description: "Pens, notebooks, and office supplies" },
+{ name: "Cleaning Supplies", icon: "🧹", description: "Cleaning tools and products" },
+{ name: "Home Items", icon: "🏠", description: "Household items and furniture" },
+{ name: "Electronics", icon: "💻", description: "Electronic devices and accessories" },
+{ name: "Automotive", icon: "🚗", description: "Car accessories and automotive supplies" }
+];
+
+for (const category of categories) {
+await prisma.category.upsert({
+where: { name: category.name },
+create: category,
+update: {}
+});
+}
+
+>>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
 
 console.log("Seeded ✓");
 } catch (error: any) {

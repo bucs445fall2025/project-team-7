@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { useState, useEffect, useRef, useCallback } from 'react';
+=======
+import { useState, useEffect, useRef } from 'react';
+>>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import './Chat.css';
 
@@ -35,7 +39,11 @@ export default function Chat() {
   };
 
   // Fetch messages for a conversation
+<<<<<<< HEAD
   const fetchMessages = useCallback(async (conversationId) => {
+=======
+  const fetchMessages = async (conversationId) => {
+>>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
     try {
       const response = await fetch(`${API_URL}/api/chat/conversations/${conversationId}/messages`, {
         headers: getAuthHeaders()
@@ -51,10 +59,17 @@ export default function Chat() {
     } catch (error) {
       console.error('Error fetching messages:', error);
     }
+<<<<<<< HEAD
   }, []);
 
   // Fetch all conversations
   const fetchConversations = useCallback(async () => {
+=======
+  };
+
+  // Fetch all conversations
+  const fetchConversations = async () => {
+>>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
     try {
       const response = await fetch(`${API_URL}/api/chat/conversations`, {
         headers: getAuthHeaders()
@@ -71,10 +86,17 @@ export default function Chat() {
     } finally {
       setLoading(false);
     }
+<<<<<<< HEAD
   }, []);
 
   // Create or get conversation
   const createOrGetConversation = useCallback(async (otherUserId, requestId) => {
+=======
+  };
+
+  // Create or get conversation
+  const createOrGetConversation = async (otherUserId, requestId) => {
+>>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
     try {
       const response = await fetch(`${API_URL}/api/chat/conversations`, {
         method: 'POST',
@@ -98,7 +120,11 @@ export default function Chat() {
       console.error('Error creating conversation:', error);
       alert('Failed to start conversation: ' + error.message);
     }
+<<<<<<< HEAD
   }, [fetchMessages, navigate]);
+=======
+  };
+>>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
 
   // Handle conversation selection
   const handleSelectConversation = (conversation) => {
@@ -181,7 +207,11 @@ export default function Chat() {
     if (user) {
       fetchConversations();
     }
+<<<<<<< HEAD
   }, [user, fetchConversations]);
+=======
+  }, [user]);
+>>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
 
   // Handle URL params for starting a conversation
   useEffect(() => {
@@ -196,7 +226,11 @@ export default function Chat() {
         createOrGetConversation(userIdNum, requestId ? parseInt(requestId) : undefined);
       }
     }
+<<<<<<< HEAD
   }, [searchParams, user, createOrGetConversation]);
+=======
+  }, [searchParams, user]);
+>>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
 
   // Auto-refresh messages every 3 seconds
   useEffect(() => {
@@ -208,7 +242,11 @@ export default function Chat() {
     }, 3000);
 
     return () => clearInterval(interval);
+<<<<<<< HEAD
   }, [selectedConversation, fetchMessages, fetchConversations]);
+=======
+  }, [selectedConversation]);
+>>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
 
   if (loading) {
     return (

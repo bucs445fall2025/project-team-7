@@ -1,6 +1,7 @@
 services:
   mysql:
     image: mysql:8.0
+<<<<<<< HEAD
     container_name: borrow-lend-mysql
     restart: unless-stopped
     environment:
@@ -94,4 +95,49 @@ services:
 
 volumes:
   mysql_data:
+=======
+    container_name: bl-mysql
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: borrowlend
+      MYSQL_USER: bl_user
+      MYSQL_PASSWORD: bl_pass
+      MYSQL_ROOT_PASSWORD: root_pass
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - ./borrow_lend/mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-proot_pass"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+
+  backend:
+    build: ./borrow_lend/backend
+    container_name: bl-backend
+    env_file:
+      - .env
+    depends_on:
+      mysql:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+      - "5555:5555"
+    volumes: []
+
+  frontend:
+    build: ./borrow_lend/frontend
+    container_name: bl-frontend
+    env_file:
+      - .env.frontend
+    depends_on:
+      - backend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./borrow_lend/frontend/src:/app/src
+      - ./borrow_lend/frontend/public:/app/public
+>>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
 

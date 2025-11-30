@@ -1,5 +1,9 @@
 import { useNavigate } from 'react-router-dom';
+<<<<<<< HEAD
 import { useState, useEffect, useCallback } from 'react';
+=======
+import { useState, useEffect } from 'react';
+>>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
 import './MyRequests.css';
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
@@ -27,7 +31,15 @@ export default function MyRequests() {
     };
   };
 
+<<<<<<< HEAD
   const fetchRequests = useCallback(async () => {
+=======
+  useEffect(() => {
+    fetchRequests();
+  }, []);
+
+  const fetchRequests = async () => {
+>>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
     try {
       const response = await fetch(`${API_URL}/api/requests/mine`, {
         headers: getAuthHeaders()
@@ -43,11 +55,15 @@ export default function MyRequests() {
     } finally {
       setLoading(false);
     }
+<<<<<<< HEAD
   }, [navigate]);
 
   useEffect(() => {
     fetchRequests();
   }, [fetchRequests]);
+=======
+  };
+>>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
 
   const handleEdit = (request) => {
     setEditingId(request.id);

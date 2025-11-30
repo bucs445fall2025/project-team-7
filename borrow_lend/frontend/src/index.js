@@ -2,7 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+<<<<<<< HEAD
 import { BrowserRouter } from 'react-router-dom';
+=======
+import {BrowserRouter} from 'react-router-dom'
+>>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
 
 import Routingpage from './router';
 const root = ReactDOM.createRoot(document.getElementById('root'));

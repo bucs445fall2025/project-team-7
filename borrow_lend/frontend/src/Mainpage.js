@@ -59,6 +59,15 @@ export default function Main() {
     navigate('/profile');
   };
 
+<<<<<<< HEAD
+=======
+  const handleLogout = () => {
+    sessionStorage.removeItem('token');
+    sessionStorage.removeItem('user');
+    navigate('/');
+  };
+
+>>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
   return (
     <div className="container">
       <header className="header">
