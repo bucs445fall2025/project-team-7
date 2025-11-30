@@ -8,7 +8,8 @@ echo "🔄 Running database migrations..."
 npx prisma migrate deploy
 
 echo "🌱 Seeding database..."
-npx tsx prisma/seed.ts || npm run seed || echo "⚠️  Seed failed, continuing..."
+# Seed is optional - if it fails, continue anyway (database might already be seeded)
+npm run seed 2>/dev/null || npx tsx prisma/seed.ts 2>/dev/null || echo "⚠️  Seed skipped (optional - database may already be seeded)"
 
 echo "🚀 Starting API..."
 node dist/src/index.js &

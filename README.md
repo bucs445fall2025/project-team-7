@@ -35,6 +35,17 @@ A list of features, functional or non-functional, we would like to add in the fu
 * [Node.js](https://nodejs.org/) (version 20 or higher) - for running migrations locally
 * [npm](https://www.npmjs.com/) (comes with Node.js)
 
+## ⚠️ Important: Prisma Version
+
+This project uses **Prisma 5.20.0**. If you have Prisma 7.x installed globally, you may encounter errors. To fix:
+
+```bash
+cd borrow_lend/backend
+npm install prisma@5.20.0 @prisma/client@5.20.0 --save-exact
+```
+
+See `borrow_lend/backend/PRISMA_FIX.md` for more details.
+
 ## Installing
 
 A step by step series of examples that tell you how to get a development env running:
