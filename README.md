@@ -99,14 +99,14 @@ npm install prisma@5.20.0 @prisma/client@5.20.0 --save-exact
 A step by step series of examples that tell you how to get a development env running:
 
 **Step 1: Clone the repository**
->>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
+
 
 ```bash
 git clone https://github.com/bucs445fall2025/project-team-7.git
 cd project-team-7
 ```
 
-<<<<<<< HEAD
+
 ### Step 2: Start all services (Recommended - Docker Compose)
 
 The easiest way to get started is using Docker Compose, which handles everything automatically:
@@ -142,13 +142,13 @@ DATABASE_URL="mysql://bl_user:bl_pass@mysql:3306/borrowlend"
 
 # JWT Secret (change this to a secure random string)
 JWT_SECRET="your-secret-key-here"
->>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
+
 
 # CORS Origin (frontend URL)
 CORS_ORIGIN="http://localhost:3000"
 ```
 
-<<<<<<< HEAD
+
 Create a `.env` file in the `borrow_lend/frontend` directory:
 
 ```env
@@ -164,23 +164,23 @@ REACT_APP_API_URL=http://localhost:8000
 ```
 
 **Step 3: Start MySQL database**
->>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
+
 
 ```bash
 docker-compose up -d mysql
 ```
 
-<<<<<<< HEAD
+
 #### Step 2c: Wait for MySQL to be ready
 =======
 **Step 4: Wait for MySQL to be ready**
->>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
+
 
 ```bash
 sleep 15
 ```
 
-<<<<<<< HEAD
+
 #### Step 2d: Run database migrations
 
 ```bash
@@ -197,26 +197,26 @@ npx prisma generate
 cd ../..
 ```
 
-<<<<<<< HEAD
+
 #### Step 2e: Start all services
 =======
 **Step 6: Start all services**
->>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
+
 
 ```bash
 docker-compose up -d
 ```
 
-<<<<<<< HEAD
+
 ### Step 3: Verify installation
 =======
 **Step 7: Verify installation**
->>>>>>> f53064f1b463130d6a7e70a189454ae23a4f718c
+
 
 Check that all containers are running:
 
 ```bash
-<<<<<<< HEAD
+
 docker-compose ps
 ```
 
