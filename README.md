@@ -31,6 +31,9 @@ See `REQUIREMENTS_ANALYSIS.md` for the Software Requirements Specification docum
 
 - **Docker** (version 20.10 or higher)
 - **Docker Compose** (usually included with Docker Desktop)
+  - Modern Docker Desktop (v4.0+) uses `docker compose` (with space)
+  - Older versions use `docker-compose` (with hyphen)
+  - Check your version: `docker compose version` or `docker-compose --version`
 - **Node.js** (version 20 or higher) - for running migrations locally
 - **npm** (comes with Node.js)
 
@@ -61,8 +64,14 @@ cd project-team-7
 The easiest way to get started is using Docker Compose, which handles everything automatically:
 
 ```bash
+# Modern Docker Desktop (v4.0+)
+docker compose up -d
+
+# OR older versions
 docker-compose up -d
 ```
+
+**Note:** If `docker compose` doesn't work, try `docker-compose` (with hyphen).
 
 **Note:** On first run, database migrations and seed data will run automatically. This ensures that when you open the project on another PC, the database schema and sample data will be ready.
 
@@ -94,7 +103,7 @@ REACT_APP_API_URL=http://localhost:8000
 #### Step 2b: Start MySQL database
 
 ```bash
-docker-compose up -d mysql
+docker compose up -d mysql
 ```
 
 #### Step 2c: Wait for MySQL to be ready
@@ -115,7 +124,7 @@ cd ../..
 #### Step 2e: Start all services
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 ### Step 3: Verify installation
@@ -123,7 +132,7 @@ docker-compose up -d
 Check that all containers are running:
 
 ```bash
-docker-compose ps
+docker compose ps
 ```
 
 You should see containers: `borrow-lend-mysql`, `borrow-lend-backend`, `borrow-lend-frontend`, and `borrow-lend-seed` (if seed ran).
@@ -148,18 +157,18 @@ You should see the Borrow & Lend homepage at http://localhost:3000 where you can
 
 Database data is permanently stored in a Docker volume:
 - Volume name: `project-team-7_mysql_data`
-- Data will **NOT BE LOST** when you run `docker-compose down`
+- Data will **NOT BE LOST** when you run `docker compose down`
 
 **Important:** 
 - The `mysql-data/` folder is **NOT needed** and is ignored by git
 - If you download the project as a ZIP file, the `mysql-data/` folder will **NOT be included** (and it shouldn't be)
-- Docker automatically creates a volume for MySQL data storage when you run `docker-compose up`
+- Docker automatically creates a volume for MySQL data storage when you run `docker compose up`
 - You can safely delete the `mysql-data/` folder if it exists - Docker will recreate it automatically
 
 ### To completely delete the database:
 
 ```bash
-docker-compose down -v  # ⚠️ WARNING: This command deletes all data!
+docker compose down -v  # ⚠️ WARNING: This command deletes all data!
 ```
 
 ## Default Users
@@ -171,19 +180,19 @@ docker-compose down -v  # ⚠️ WARNING: This command deletes all data!
 ### View backend logs:
 
 ```bash
-docker-compose logs -f backend
+docker compose logs -f backend
 ```
 
 ### View frontend logs:
 
 ```bash
-docker-compose logs -f frontend
+docker compose logs -f frontend
 ```
 
 ### Connect to MySQL:
 
 ```bash
-docker-compose exec mysql mysql -uappuser -papppassword borrow_lend
+docker compose exec mysql mysql -uappuser -papppassword borrow_lend
 ```
 
 ### Start Prisma Studio:
@@ -191,7 +200,7 @@ docker-compose exec mysql mysql -uappuser -papppassword borrow_lend
 Prisma Studio is already running at http://localhost:5555. If you need to start it manually:
 
 ```bash
-docker-compose exec backend sh -c "cd /app && DATABASE_URL='mysql://appuser:apppassword@mysql:3306/borrow_lend?charset=utf8mb4' npx prisma studio --hostname 0.0.0.0 --port 5555"
+docker compose exec backend sh -c "cd /app && DATABASE_URL='mysql://appuser:apppassword@mysql:3306/borrow_lend?charset=utf8mb4' npx prisma studio --hostname 0.0.0.0 --port 5555"
 ```
 
 ## Project Structure
@@ -209,7 +218,7 @@ project-team-7/
 
 1. Check that all services are running:
    ```bash
-   docker-compose ps
+   docker compose ps
    ```
 
 2. Open Frontend: http://localhost:3000
@@ -224,15 +233,15 @@ project-team-7/
 ### Services won't start:
 
 ```bash
-docker-compose down
-docker-compose up -d --build
+docker compose down
+docker compose up -d --build
 ```
 
 ### Database connection issue:
 
 ```bash
-docker-compose restart mysql
-docker-compose restart backend
+docker compose restart mysql
+docker compose restart backend
 ```
 
 ### Schema mismatch / Seed failed error:
@@ -241,16 +250,16 @@ If you encounter "schema mismatch" or "seed failed" errors:
 
 ```bash
 # Stop all services
-docker-compose down
+docker compose down
 
 # Clean volumes (reset database)
-docker-compose down -v
+docker compose down -v
 
 # Restart (migrations and seed will run automatically)
-docker-compose up -d --build
+docker compose up -d --build
 
 # Check seed logs
-docker-compose logs seed
+docker compose logs seed
 ```
 
 ### Frontend can't connect to backend:
@@ -259,23 +268,23 @@ If the frontend shows "Failed to connect to server" or API errors:
 
 1. **Check if backend is running:**
    ```bash
-   docker-compose ps backend
+   docker compose ps backend
    curl http://localhost:8000/health
    ```
 
 2. **Check backend logs:**
    ```bash
-   docker-compose logs backend
+   docker compose logs backend
    ```
 
 3. **Rebuild frontend with correct API URL:**
    ```bash
-   docker-compose up -d --build frontend
+   docker compose up -d --build frontend
    ```
 
 4. **Verify all services are running:**
    ```bash
-   docker-compose ps
+   docker compose ps
    ```
    All services should show "Up" status.
 
@@ -286,18 +295,21 @@ If services fail to start on a different computer:
 1. **Make sure Docker is running:**
    ```bash
    docker --version
+   # Modern Docker Desktop (v4.0+)
+   docker compose version
+   # OR older versions
    docker-compose --version
    ```
 
 2. **Clean start:**
    ```bash
-   docker-compose down -v
-   docker-compose up -d --build
+   docker compose down -v
+   docker compose up -d --build
    ```
 
 3. **Check logs for errors:**
    ```bash
-   docker-compose logs
+   docker compose logs
    ```
 
 4. **Verify ports are not in use:**
@@ -312,7 +324,7 @@ If services fail to start on a different computer:
 ### Clean volumes (ALL DATA WILL BE DELETED):
 
 ```bash
-docker-compose down -v
+docker compose down -v
 ```
 
 ## Built With
