@@ -77,6 +77,8 @@ services:
     build:
       context: ./borrow_lend/frontend
       dockerfile: Dockerfile
+      args:
+        REACT_APP_API_URL: http://localhost:8000
     container_name: borrow-lend-frontend
     restart: unless-stopped
     ports:

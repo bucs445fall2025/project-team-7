@@ -253,6 +253,62 @@ docker-compose up -d --build
 docker-compose logs seed
 ```
 
+### Frontend can't connect to backend:
+
+If the frontend shows "Failed to connect to server" or API errors:
+
+1. **Check if backend is running:**
+   ```bash
+   docker-compose ps backend
+   curl http://localhost:8000/health
+   ```
+
+2. **Check backend logs:**
+   ```bash
+   docker-compose logs backend
+   ```
+
+3. **Rebuild frontend with correct API URL:**
+   ```bash
+   docker-compose up -d --build frontend
+   ```
+
+4. **Verify all services are running:**
+   ```bash
+   docker-compose ps
+   ```
+   All services should show "Up" status.
+
+### Services won't start on another computer:
+
+If services fail to start on a different computer:
+
+1. **Make sure Docker is running:**
+   ```bash
+   docker --version
+   docker-compose --version
+   ```
+
+2. **Clean start:**
+   ```bash
+   docker-compose down -v
+   docker-compose up -d --build
+   ```
+
+3. **Check logs for errors:**
+   ```bash
+   docker-compose logs
+   ```
+
+4. **Verify ports are not in use:**
+   ```bash
+   # Check if ports 3000, 8000, 3306, 5555 are available
+   lsof -i :3000
+   lsof -i :8000
+   lsof -i :3306
+   lsof -i :5555
+   ```
+
 ### Clean volumes (ALL DATA WILL BE DELETED):
 
 ```bash

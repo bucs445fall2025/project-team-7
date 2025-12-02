@@ -76,29 +76,71 @@ export default function Chat() {
   // Create or get conversation
   const createOrGetConversation = useCallback(async (otherUserId, requestId) => {
     try {
+      const requestBody = {
+        otherUserId,
+        ...(requestId && { requestId })
+      };
+      console.log('Creating conversation with:', requestBody);
+      console.log('API URL:', `${API_URL}/api/chat/conversations`);
+      console.log('Auth headers:', getAuthHeaders());
+      
       const response = await fetch(`${API_URL}/api/chat/conversations`, {
         method: 'POST',
         headers: getAuthHeaders(),
-        body: JSON.stringify({
-          otherUserId,
-          ...(requestId && { requestId })
-        })
+        body: JSON.stringify(requestBody)
       });
+
+      console.log('Response status:', response.status);
+      console.log('Response ok:', response.ok);
 
       if (response.ok) {
         const conversation = await response.json();
-        setSelectedConversation(conversation);
+        console.log('Conversation created:', conversation);
+        
+        // Format conversation to match the expected structure
+        const formattedConversation = {
+          id: conversation.id,
+          otherUser: conversation.otherUser,
+          request: conversation.request,
+          lastMessage: null,
+          unreadCount: 0
+        };
+        
+        setSelectedConversation(formattedConversation);
         await fetchMessages(conversation.id);
+        await fetchConversations(); // Refresh conversations list
         navigate('/chat', { replace: true });
       } else {
-        const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
-        alert(errorData.error || 'Failed to start conversation');
+        let errorMessage = 'Failed to start conversation';
+        try {
+          const errorData = await response.json();
+          errorMessage = errorData.error || errorMessage;
+          console.error('Failed to create conversation:', {
+            status: response.status,
+            statusText: response.statusText,
+            error: errorData
+          });
+        } catch (e) {
+          const text = await response.text().catch(() => '');
+          console.error('Failed to parse error response:', {
+            status: response.status,
+            statusText: response.statusText,
+            text: text,
+            parseError: e
+          });
+          errorMessage = `Server error (${response.status}): ${text || 'Unknown error'}`;
+        }
+        alert(errorMessage);
       }
     } catch (error) {
-      console.error('Error creating conversation:', error);
-      alert('Failed to start conversation: ' + error.message);
+      console.error('Error creating conversation:', {
+        error: error,
+        message: error.message,
+        stack: error.stack
+      });
+      alert('Failed to start conversation: ' + (error.message || 'Network error'));
     }
-  }, [fetchMessages, navigate]);
+  }, [fetchMessages, fetchConversations, navigate]);
 
   // Handle conversation selection
   const handleSelectConversation = (conversation) => {
