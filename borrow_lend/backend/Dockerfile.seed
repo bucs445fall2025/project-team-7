@@ -1,0 +1,11 @@
+# Dockerfile for running seed - includes dev dependencies for tsx
+FROM node:20-alpine
+WORKDIR /app
+COPY package.json package-lock.json* ./
+# Install all dependencies including devDependencies (needed for tsx)
+RUN npm ci --include=dev
+COPY prisma ./prisma
+EXPOSE 8000
+# Wait for MySQL to be ready, then generate client, run migrations, and seed
+CMD ["sh", "-c", "echo 'Waiting for database...' && sleep 2 && npx prisma generate && echo 'Running migrations...' && npx prisma migrate deploy && echo 'Running seed...' && npx tsx prisma/seed.ts"]
+
