@@ -530,89 +530,89 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Step-by-Step Instructions to Run Program and Show All Working Features
 
-| Step | Action | Expected Result |
-|------|--------|----------------|
-| 1 | Open terminal and navigate to project directory | Terminal is in project-team-7 directory |
-| 2 | Run `docker compose up -d` | All containers start (mysql, backend, frontend, seed) |
-| 3 | Wait 30 seconds for services to initialize | Seed completes, database is populated |
-| 4 | Open web browser | Browser window opens |
-| 5 | Navigate to http://localhost:3000 | Login page loads and displays |
-| 6 | Observe login page UI | Login form with email and password fields is visible |
-| 7 | Enter email: `demo@binghamton.edu` | Email field is filled with demo email |
-| 8 | Enter password: `password123` | Password field is filled (characters are hidden) |
-| 9 | Click "Login" button | User is authenticated and redirected to homepage |
-| 10 | Observe homepage loads | Homepage displays with navigation menu |
-| 11 | View categories section | At least 10 categories are displayed (Electronics, Books, Sports & Fitness, Clothing & Accessories, Home & Living, Tools & Equipment, Transportation, Entertainment, School Supplies, Other) |
-| 12 | Observe category icons | Each category displays an icon/emoji |
-| 13 | Observe category descriptions | Each category shows a description text |
-| 14 | Click on "Electronics" category | Category detail page loads |
-| 15 | View items in Electronics category | Items list displays (may include demo items like "Graphing Calculator") |
-| 16 | Observe item details | Each item shows title, description, and location |
-| 17 | Click browser back button | Return to homepage |
-| 18 | Click on "Books" category | Category detail page loads for Books |
-| 19 | View items in Books category | Items list displays (may be empty or have items) |
-| 20 | Click browser back button | Return to homepage |
-| 21 | Click on "Request" or "Create Request" button/link | Request form page loads |
-| 22 | Select a category from dropdown | Category is selected (e.g., "Electronics") |
-| 23 | Enter request title: `Graphing Calculator` | Title field is filled |
-| 24 | Enter request description: `Need for math exam` | Description field is filled |
-| 25 | Select start date from date picker | Start date is selected |
-| 26 | Select end date from date picker | End date is selected |
-| 27 | Click "Submit" or "Create Request" button | Request is created successfully |
-| 28 | Observe success message or redirect | Confirmation message appears or page redirects |
-| 29 | Navigate to "My Requests" page | My Requests page loads |
-| 30 | View created request in list | Request appears in list with status "PENDING" |
-| 31 | Observe request details | Request shows title, description, dates, and status |
-| 32 | Click on "Profile" or user menu | Profile page loads |
-| 33 | View profile information | Profile displays user email (demo@binghamton.edu), name, and account details |
-| 34 | Observe user's items section | Items owned by user are displayed (may include demo items) |
-| 35 | Observe user's requests section | User's borrow requests are displayed |
-| 36 | Navigate to homepage | Return to homepage |
-| 37 | Click on "Chat" or "Messages" button/link | Chat/Messages page loads |
-| 38 | View conversations list | List of conversations displays (may be empty or show existing conversations) |
-| 39 | Click on a conversation or "New Message" | Chat interface opens |
-| 40 | Type message: `Hello, I'm interested in borrowing this item` | Message text appears in input field |
-| 41 | Click "Send" button | Message is sent and appears in chat window |
-| 42 | Observe message in chat | Sent message displays with timestamp |
-| 43 | Navigate back to homepage | Return to homepage |
-| 44 | Click "Logout" button | User is logged out |
-| 45 | Observe redirect to login page | Login page displays again |
-| 46 | Try to navigate directly to http://localhost:3000/home | User is redirected to login page (protected route) |
-| 47 | Enter incorrect email: `wrong@binghamton.edu` | Email field is filled |
-| 48 | Enter password: `password123` | Password field is filled |
-| 49 | Click "Login" button | Error message displays: "Invalid email or password" |
-| 50 | Clear email and password fields | Fields are empty |
-| 51 | Enter correct email: `demo@binghamton.edu` | Email field is filled |
-| 52 | Enter incorrect password: `wrongpassword` | Password field is filled |
-| 53 | Click "Login" button | Error message displays: "Invalid email or password" |
-| 54 | Clear fields and enter correct credentials | Fields are filled with correct demo credentials |
-| 55 | Click "Login" button | User successfully logs in |
-| 56 | Verify homepage loads | Homepage displays correctly |
-| 57 | Open new browser tab | New tab opens |
-| 58 | Navigate to http://localhost:8000/api/categories | Backend API endpoint responds |
-| 59 | Observe JSON response | JSON data with categories array is displayed |
-| 60 | Verify categories in response | Response contains at least 10 category objects with name, icon, description |
-| 61 | Close API tab and return to application | Application tab is active |
-| 62 | Navigate to different category pages | Test browsing multiple categories |
-| 63 | Verify all categories are accessible | Each category page loads correctly |
-| 64 | Test creating another request | Create a second borrow request |
-| 65 | Verify request appears in My Requests | Both requests appear in the list |
-| 66 | Test chat functionality | Send multiple messages in chat |
-| 67 | Verify messages persist | Messages remain visible after page refresh |
-| 68 | Open browser developer console (F12) | Developer tools open |
-| 69 | Check for console errors | No critical errors are displayed |
-| 70 | Close developer console | Console is closed |
-| 71 | Stop containers: `docker compose down` | Containers stop gracefully |
-| 72 | Start containers again: `docker compose up -d` | Containers restart |
-| 73 | Wait 30 seconds | Services initialize |
-| 74 | Navigate to http://localhost:3000 | Application loads |
-| 75 | Log in with demo credentials | User successfully logs in |
-| 76 | Verify data persists | Previously created requests and data still exist |
-| 77 | Navigate to My Requests | Requests page loads |
-| 78 | Verify requests are still present | All previously created requests are displayed |
-| 79 | Navigate to Chat | Chat page loads |
-| 80 | Verify messages persist | Previously sent messages are still visible |
-| 81 | Test complete - all features verified | Application demonstrates all working features |
+| Step | Action | Result |
+|------|--------|--------|
+| 1 | Open terminal, navigate to project-team-7 directory, and run `docker compose up -d` | Terminal shows containers starting: mysql, backend, frontend, seed |
+| 2 | Wait 30 seconds for services to initialize | Seed completes, database is populated with demo user and 10 categories |
+| 3 | Open web browser and navigate to http://localhost:3000 | Login page displays with email and password input fields |
+| 4 | Click on email input field, type `demo@binghamton.edu`, and press Tab | Email field displays "demo@binghamton.edu" |
+| 5 | Click on password input field, type `password123`, and press Tab | Password field displays dots/hidden characters |
+| 6 | Click "Login" button | Page redirects to homepage, user is authenticated |
+| 7 | Observe homepage after login | Homepage displays with navigation menu and categories section |
+| 8 | Scroll down to view categories section | At least 10 category cards display: Electronics, Books, Sports & Fitness, Clothing & Accessories, Home & Living, Tools & Equipment, Transportation, Entertainment, School Supplies, Other |
+| 9 | Observe Electronics category card | Electronics card shows icon 📱, name "Electronics", and description text |
+| 10 | Click on "Electronics" category card | Page navigates to Electronics category detail page |
+| 11 | Observe items list on Electronics page | Items list displays (may show "Graphing Calculator" demo item) |
+| 12 | Observe item details for first item | Item shows title "Graphing Calculator", description "TI‑84", and location "CIW" |
+| 13 | Click browser back button | Page returns to homepage |
+| 14 | Click on "Books" category card | Page navigates to Books category detail page |
+| 15 | Observe items list on Books page | Items list displays (may be empty or show items) |
+| 16 | Click browser back button | Page returns to homepage |
+| 17 | Click on "Request" or "Create Request" button/link in navigation | Page navigates to request form page |
+| 18 | Click on category dropdown, select "Electronics", and press Enter | Dropdown shows "Electronics" selected |
+| 19 | Click on title input field, type `Graphing Calculator`, and press Tab | Title field displays "Graphing Calculator" |
+| 20 | Click on description textarea, type `Need for math exam`, and press Tab | Description field displays "Need for math exam" |
+| 21 | Click on start date picker, select a date (e.g., tomorrow), and click OK | Start date field displays selected date |
+| 22 | Click on end date picker, select a date (e.g., next week), and click OK | End date field displays selected date |
+| 23 | Click "Submit" or "Create Request" button | Request is created, page shows success message or redirects |
+| 24 | Click on "My Requests" link in navigation | Page navigates to My Requests page |
+| 25 | Observe requests list on My Requests page | Request list displays with newly created request showing status "PENDING" |
+| 26 | Observe request details in list | Request shows title "Graphing Calculator", description "Need for math exam", selected dates, and status "PENDING" |
+| 27 | Click on "Profile" link or user menu icon | Page navigates to Profile page |
+| 28 | Observe profile information section | Profile displays email "demo@binghamton.edu", name "Demo User", and account creation date |
+| 29 | Scroll down to view user's items section | Items section displays (may show demo items like "Graphing Calculator" and "Mini Vacuum") |
+| 30 | Scroll down to view user's requests section | Requests section displays user's borrow requests including the newly created one |
+| 31 | Click on "Home" or logo to navigate to homepage | Page returns to homepage |
+| 32 | Click on "Chat" or "Messages" button/link in navigation | Page navigates to Chat/Messages page |
+| 33 | Observe conversations list | Conversations list displays (may be empty or show existing conversations) |
+| 34 | Click on a conversation in list OR click "New Message" button | Chat interface opens, message input field is visible |
+| 35 | Click on message input field, type `Hello, I have this item`, and press Enter | Message text "Hello, I have this item" appears in input field |
+| 36 | Click "Send" button | Message is sent and appears in chat window above input field |
+| 37 | Observe sent message in chat window | Message displays with text "Hello, I have this item" and timestamp |
+| 38 | Click on "Home" link to navigate to homepage | Page returns to homepage |
+| 39 | Click "Logout" button in navigation menu | User is logged out, page redirects to login page |
+| 40 | Observe login page after logout | Login page displays with empty email and password fields |
+| 41 | Type http://localhost:3000/home in address bar and press Enter | Page redirects to login page (protected route blocks access) |
+| 42 | Click on email input field, type `wrong@binghamton.edu`, and press Tab | Email field displays "wrong@binghamton.edu" |
+| 43 | Click on password input field, type `password123`, and press Tab | Password field displays dots/hidden characters |
+| 44 | Click "Login" button | Error message displays: "Invalid email or password" |
+| 45 | Click on email input field, select all text (Cmd+A), press Delete, type `demo@binghamton.edu`, and press Tab | Email field displays "demo@binghamton.edu" |
+| 46 | Click on password input field, select all text (Cmd+A), type `wrongpassword`, and press Tab | Password field displays dots/hidden characters |
+| 47 | Click "Login" button | Error message displays: "Invalid email or password" |
+| 48 | Click on email input field, select all text (Cmd+A), type `demo@binghamton.edu`, and press Tab | Email field displays "demo@binghamton.edu" |
+| 49 | Click on password input field, select all text (Cmd+A), type `password123`, and press Tab | Password field displays dots/hidden characters |
+| 50 | Click "Login" button | Page redirects to homepage, user successfully logs in |
+| 51 | Observe homepage after successful login | Homepage displays correctly with all categories visible |
+| 52 | Open new browser tab (Cmd+T), type http://localhost:8000/api/categories in address bar, and press Enter | New tab opens showing JSON response |
+| 53 | Observe JSON response in browser | JSON data displays with categories array containing at least 10 objects |
+| 54 | Scroll through JSON response | Each category object shows fields: id, name, icon, description, createdAt, updatedAt |
+| 55 | Close API tab (Cmd+W) and return to application tab | Application tab becomes active |
+| 56 | Click on "Sports & Fitness" category card | Page navigates to Sports & Fitness category detail page |
+| 57 | Observe Sports & Fitness page loads | Category detail page displays correctly |
+| 58 | Click browser back button | Page returns to homepage |
+| 59 | Click on "Tools & Equipment" category card | Page navigates to Tools & Equipment category detail page |
+| 60 | Observe Tools & Equipment page loads | Category detail page displays correctly |
+| 61 | Click browser back button | Page returns to homepage |
+| 62 | Click on "Request" link, select "Electronics" category, enter title `Laptop`, enter description `Need for coding project`, select dates, and click Submit | Second request is created successfully |
+| 63 | Click on "My Requests" link | My Requests page loads |
+| 64 | Observe requests list | Both requests appear in list: "Graphing Calculator" and "Laptop" |
+| 65 | Click on "Chat" link, open a conversation, type `When can I give you?`, and click Send | Message "When can I give you?" is sent and appears in chat |
+| 66 | Press F5 or Cmd+R to refresh page | Page refreshes |
+| 67 | Observe messages after refresh | Previously sent messages "Hello, I have this item" and "When can I give you?" remain visible |
+| 68 | Press F12 to open browser developer console | Developer tools panel opens at bottom or side of browser |
+| 69 | Click on "Console" tab in developer tools | Console tab displays |
+| 70 | Observe console for errors | Console shows no critical errors (may show info/warning messages) |
+| 71 | Press F12 again to close developer console | Developer tools panel closes |
+| 72 | Open terminal, run `docker compose down`, and press Enter | Terminal shows containers stopping: mysql, backend, frontend |
+| 73 | Wait 5 seconds, then run `docker compose up -d` in terminal | Terminal shows containers starting again |
+| 74 | Wait 30 seconds for services to initialize | Seed completes, database reconnects |
+| 75 | Return to browser, navigate to http://localhost:3000 | Login page displays |
+| 76 | Enter email `demo@binghamton.edu`, enter password `password123`, and click Login | User successfully logs in |
+| 77 | Click on "My Requests" link | My Requests page loads |
+| 78 | Observe requests list | Both previously created requests ("Graphing Calculator" and "Laptop") are still displayed |
+| 79 | Click on "Chat" link | Chat page loads |
+| 80 | Open a conversation | Chat interface opens |
+| 81 | Observe messages in chat | Previously sent messages ("Hello, I have this item" and "When can I give you?") are still visible |
 
 ### Test Summary
 
